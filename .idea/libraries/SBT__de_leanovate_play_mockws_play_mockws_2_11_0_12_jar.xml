@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SBT: de.leanovate.play-mockws:play-mockws_2.11:0.12:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/de.leanovate.play-mockws/play-mockws_2.11/jars/play-mockws_2.11-0.12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

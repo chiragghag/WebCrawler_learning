@@ -1,0 +1,265 @@
+03/13 04:36:59 INFO play - Starting application default Akka system.
+03/13 04:36:59 INFO play - Application started (Dev)
+03/13 04:37:00 ERRORapplication - 
+
+! @6lekj5071 - Internal server error, for (GET) [/links] ->
+
+play.api.Application$$anon$1: Execution exception[[AskTimeoutException: Ask timed out on [Actor[akka://application/user/webCrawler#-626691383]] after [1000 ms]]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$14$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:205) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$14$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:202) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:215) [scala-library-2.11.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:191) [scala-library-2.11.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:215) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.4.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:67) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:82) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:59) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:59) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.11.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch.run(BatchingExecutor.scala:58) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.4.jar:na]
+Caused by: akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://application/user/webCrawler#-626691383]] after [1000 ms]
+	at akka.pattern.PromiseActorRef$$anonfun$1.apply$mcV$sp(AskSupport.scala:333) ~[akka-actor_2.11-2.3.4.jar:na]
+	at akka.actor.Scheduler$$anon$7.run(Scheduler.scala:117) ~[akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:599) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:109) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:597) ~[scala-library-2.11.4.jar:na]
+	at akka.actor.LightArrayRevolverScheduler$TaskHolder.executeTask(Scheduler.scala:467) ~[akka-actor_2.11-2.3.4.jar:na]
+	at akka.actor.LightArrayRevolverScheduler$$anon$8.executeBucket$1(Scheduler.scala:419) ~[akka-actor_2.11-2.3.4.jar:na]
+	at akka.actor.LightArrayRevolverScheduler$$anon$8.nextTick(Scheduler.scala:423) ~[akka-actor_2.11-2.3.4.jar:na]
+	at akka.actor.LightArrayRevolverScheduler$$anon$8.run(Scheduler.scala:375) ~[akka-actor_2.11-2.3.4.jar:na]
+	at java.lang.Thread.run(Thread.java:744) ~[na:1.7.0_51]
+03/13 04:37:29 INFO play - Shutdown application default Akka system.
+03/13 04:37:29 INFO play - Starting application default Akka system.
+03/13 04:37:29 INFO play - Application started (Dev)
+03/13 04:37:30 ERRORapplication - 
+
+! @6lekj6idb - Internal server error, for (GET) [/links] ->
+
+play.api.Application$$anon$1: Execution exception[[ClassCastException: Cannot cast scala.concurrent.impl.Promise$DefaultPromise to scala.collection.Seq]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$14$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:205) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$14$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:202) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:215) [scala-library-2.11.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:191) [scala-library-2.11.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:215) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.4.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:67) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:82) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:59) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:59) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.11.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch.run(BatchingExecutor.scala:58) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.4.jar:na]
+Caused by: java.lang.ClassCastException: Cannot cast scala.concurrent.impl.Promise$DefaultPromise to scala.collection.Seq
+	at java.lang.Class.cast(Class.java:3094) ~[na:1.7.0_51]
+	at scala.concurrent.Future$$anonfun$mapTo$1.apply(Future.scala:405) ~[scala-library-2.11.4.jar:na]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:236) ~[scala-library-2.11.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:191) [scala-library-2.11.4.jar:na]
+	at scala.util.Success.map(Try.scala:236) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:599) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:597) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.4.jar:na]
+	at akka.pattern.PromiseActorRef.$bang(AskSupport.scala:267) ~[akka-actor_2.11-2.3.4.jar:na]
+	at webcrawler.WebCrawler$$anonfun$receive$1.applyOrElse(WebCrawler.scala:55) ~[na:na]
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:465) ~[akka-actor_2.11-2.3.4.jar:na]
+	at webcrawler.WebCrawler.aroundReceive(WebCrawler.scala:46) ~[na:na]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:516) ~[akka-actor_2.11-2.3.4.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:487) ~[akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:238) ~[akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:220) ~[akka-actor_2.11-2.3.4.jar:na]
+	... 5 common frames omitted
+03/13 04:44:01 INFO play - Shutdown application default Akka system.
+03/13 04:44:01 INFO play - Starting application default Akka system.
+03/13 04:44:01 INFO play - Application started (Dev)
+03/13 04:44:01 ERRORapplication - 
+
+! @6lekk2ppg - Internal server error, for (GET) [/links] ->
+
+play.api.Application$$anon$1: Execution exception[[ClassCastException: Cannot cast scala.concurrent.impl.Promise$DefaultPromise to scala.collection.Seq]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$14$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:205) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$14$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:202) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:215) [scala-library-2.11.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:191) [scala-library-2.11.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:215) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.4.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:67) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:82) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:59) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:59) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.11.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch.run(BatchingExecutor.scala:58) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.4.jar:na]
+Caused by: java.lang.ClassCastException: Cannot cast scala.concurrent.impl.Promise$DefaultPromise to scala.collection.Seq
+	at java.lang.Class.cast(Class.java:3094) ~[na:1.7.0_51]
+	at scala.concurrent.Future$$anonfun$mapTo$1.apply(Future.scala:405) ~[scala-library-2.11.4.jar:na]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:236) ~[scala-library-2.11.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:191) [scala-library-2.11.4.jar:na]
+	at scala.util.Success.map(Try.scala:236) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:599) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:597) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.4.jar:na]
+	at akka.pattern.PromiseActorRef.$bang(AskSupport.scala:267) ~[akka-actor_2.11-2.3.4.jar:na]
+	at webcrawler.WebCrawler$$anonfun$receive$1.applyOrElse(WebCrawler.scala:59) ~[na:na]
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:465) ~[akka-actor_2.11-2.3.4.jar:na]
+	at webcrawler.WebCrawler.aroundReceive(WebCrawler.scala:50) ~[na:na]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:516) ~[akka-actor_2.11-2.3.4.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:487) ~[akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:238) ~[akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:220) ~[akka-actor_2.11-2.3.4.jar:na]
+	... 5 common frames omitted
+03/13 04:50:29 INFO play - Shutdown application default Akka system.
+03/13 04:50:29 INFO play - Starting application default Akka system.
+03/13 04:50:29 INFO play - Application started (Dev)
+03/13 04:51:25 ERRORapplication - 
+
+! @6lekl2665 - Internal server error, for (GET) [/links] ->
+
+play.PlayExceptions$CompilationException: Compilation error[missing parameter type for expanded function ((x$2) => x$2.$plus(((x$3) => "\n".$plus(x$3))))]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:235) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:230) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
+	at play.PlayReloader$$anon$1.play$PlayReloader$$anon$$taskFailureHandler(PlayReloader.scala:230) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:90) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.4.jar:na]
+03/13 04:54:05 INFO play - Shutdown application default Akka system.
+03/13 04:54:05 INFO play - Starting application default Akka system.
+03/13 04:54:05 INFO play - Application started (Dev)
+03/13 04:56:59 INFO play - Shutdown application default Akka system.
+03/13 04:56:59 INFO play - Starting application default Akka system.
+03/13 04:56:59 INFO play - Application started (Dev)
+03/13 04:57:40 INFO play - Shutdown application default Akka system.
+03/13 04:57:40 INFO play - Starting application default Akka system.
+03/13 04:57:41 INFO play - Application started (Dev)
+03/13 05:00:40 INFO play - Shutdown application default Akka system.
+03/13 05:00:40 INFO play - Starting application default Akka system.
+03/13 05:00:40 INFO play - Application started (Dev)
+03/13 05:01:06 INFO play - Shutdown application default Akka system.
+03/13 05:01:06 INFO play - Starting application default Akka system.
+03/13 05:01:06 INFO play - Application started (Dev)
+03/13 05:01:57 INFO play - Shutdown application default Akka system.
+03/13 05:01:58 INFO play - Starting application default Akka system.
+03/13 05:01:58 INFO play - Application started (Dev)
+03/13 05:03:44 INFO play - Shutdown application default Akka system.
+03/13 05:03:44 INFO play - Starting application default Akka system.
+03/13 05:03:44 INFO play - Application started (Dev)
+03/13 05:04:42 ERRORapplication - 
+
+! @6lekmlfdg - Internal server error, for (GET) [/links] ->
+
+play.PlayExceptions$CompilationException: Compilation error[type mismatch;
+ found   : scala.concurrent.Future[Set[String]]
+ required: scala.concurrent.Future[Seq[String]]]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:235) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:230) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
+	at play.PlayReloader$$anon$1.play$PlayReloader$$anon$$taskFailureHandler(PlayReloader.scala:230) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:90) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.4.jar:na]
+03/13 05:04:58 INFO play - Shutdown application default Akka system.
+03/13 05:04:59 INFO play - Starting application default Akka system.
+03/13 05:04:59 INFO play - Application started (Dev)
+03/13 05:05:57 INFO play - Shutdown application default Akka system.
